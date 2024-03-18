@@ -1,0 +1,14 @@
+#Author: TaiYi
+#Date: 2024/1/25
+
+Request:
+  Menu:
+    papi: "%morepapi_cs%"  #需要判断的变量
+    case:
+      1: "trmenu open 主菜单"  #变量值为1
+      0: "trmenu open 主菜单1"  #变量值为0
+  Menu1:
+    papi: "%morepapi_cs%"  #需要判断的变量
+    case:
+      1: "trmenu open 主菜单 %player%"  #变量值为1
+      0: "trmenu open 主菜单1 %player%"  #变量值为0

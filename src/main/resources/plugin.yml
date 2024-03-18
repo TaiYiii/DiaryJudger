@@ -1,0 +1,10 @@
+name: DecisionMaker
+version: '${version}'
+main: com.taiyi.decisionmaker.DecisionMaker
+depend: [ PlaceholderAPI ]
+authors: [ Taiyi ]
+description: No use plugin
+commands:
+  decisionmaker:
+    description: main command
+    aliases: [dmk]
