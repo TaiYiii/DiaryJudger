@@ -1,10 +1,27 @@
-name: DecisionMaker
-version: '1.0.0-.0SNAPSHOT'
-main: com.taiyi.decisionmaker.DecisionMaker
+name: DiaryJudger
+version: '1.0.1-beta-SNAPSHOT'
+main: com.diary.diaryjudger.Main
 depend: [ PlaceholderAPI ]
 authors: [ Taiyi ]
 description: No use plugin
 commands:
-  decisionmaker:
+  diaryjudger:
     description: main command
-    aliases: [dmk]
+    aliases: [diajdg]
+permissions:
+  diaryjudger.excute:
+    description: excute request
+    default: op
+  diaryjudger.excuteother:
+    description: excute request for others
+    default: op
+  diaryjudger.reload:
+    description: allows reload diaryjudger
+    default: op
+  diaryjudger.*:
+    description: wildcard permission
+    default: op
+    children:
+      diaryjudger.excute: true
+      diaryjudger.excuteother: true
+      diaryjudger.reload: true

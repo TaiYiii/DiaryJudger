@@ -1,14 +1,17 @@
-#Author: TaiYi
-#Date: 2024/1/25
-
+##写法
+#
+#Request:
+#  "parm":
+#    papi: "%diarymorepapi_judger%"  #需要判断的变量
+#    case:
+#      default: "trmenu open MainMenu"  #变量值为default
+#      Gen8: "dragoncore opengui %player% Gen8/MainMenu/MainMenu"  #变量值为Gen8
+#      Gen9: "dragoncore opengui %player% Gen9/MainMenu/MainMenu"  #变量值为Gen9
+#
 Request:
-  Menu:
-    papi: "%morepapi_cs%"  #需要判断的变量
+  MainMenu:
+    papi: "%diarymorepapi_judger%"
     case:
-      1: "trmenu open 主菜单"  #变量值为1
-      0: "trmenu open 主菜单1"  #变量值为0
-  Menu1:
-    papi: "%morepapi_cs%"  #需要判断的变量
-    case:
-      1: "trmenu open 主菜单 %player%"  #变量值为1
-      0: "trmenu open 主菜单1 %player%"  #变量值为0
+      default: "trmenu open MainMenu"
+      Gen8: "dragoncore opengui %player% Gen8/MainMenu/MainMenu"
+      Gen9: "dragoncore opengui %player% Gen9/MainMenu/MainMenu"
