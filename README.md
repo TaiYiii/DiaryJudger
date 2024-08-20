@@ -1,2 +1,2 @@
-# DecisionMaker
+# DiaryJudger
  help console make decision
