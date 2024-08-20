@@ -1,5 +1,5 @@
 name: DiaryJudger
-version: '1.0.1-beta-SNAPSHOT'
+version: '1.0.2-beta-SNAPSHOT'
 main: com.diary.diaryjudger.Main
 depend: [ PlaceholderAPI ]
 authors: [ Taiyi ]

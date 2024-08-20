@@ -12,6 +12,6 @@ Request:
   MainMenu:
     papi: "%diarymorepapi_judger%"
     case:
-      default: "trmenu open MainMenu"
-      Gen8: "dragoncore opengui %player% Gen8/MainMenu/MainMenu"
-      Gen9: "dragoncore opengui %player% Gen9/MainMenu/MainMenu"
+      default: "trmenu open MainMenu %player%"
+      SwordAndShield: "dragoncore opengui %player% Gen8/MainMenu/MainMenu"
+      ScarletAndViolet: "dragoncore opengui %player% Gen9/MainMenu/MainMenu"

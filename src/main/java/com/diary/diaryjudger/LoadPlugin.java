@@ -1,7 +1,8 @@
 package com.diary.diaryjudger;
 
 import org.bukkit.Bukkit;
-import org.bukkit.command.CommandSender;
+
+import static com.diary.diaryjudger.Main.logo;
 
 public class LoadPlugin {
     private final Main plugin;
@@ -11,15 +12,7 @@ public class LoadPlugin {
     }
 
     public boolean isLoad() {
-        say(" ");
-        say("§3   ___      ___      ___      ___      ___      ___   ");
-        say("§3  /\\  \\    /\\__\\    /\\  \\    /\\  \\    /\\  \\    /\\  \\  ");
-        say("§3 _\\:\\  \\  /:/ _/_  /::\\  \\  /::\\  \\  /::\\  \\  /::\\  \\ ");
-        say("§3/\\/::\\__\\/:/_/\\__\\/:/\\:\\__\\/:/\\:\\__\\/::\\:\\__\\/::\\:\\__\\");
-        say("§3\\::/\\/__/\\:\\/:/  /\\:\\/:/  /\\:\\:\\/__/\\:\\:\\/  /\\;:::/  /");
-        say("§3 \\/__/    \\::/  /  \\::/  /  \\::/  /  \\:\\/  /  |:\\/__/ ");
-        say("§3           \\/__/    \\/__/    \\/__/    \\/__/    \\|__|");
-        say(" ");
+        say(logo);
         say("§3DiaryJudgerV"+this.plugin.getDescription().getVersion()+" by Taiyi §a@onLoad");
         say("§8  开始加载配置文件...");
         this.plugin.saveDefaultConfig();
@@ -35,8 +28,7 @@ public class LoadPlugin {
         return true;
     }
 
-    public void say(String s) {
-        CommandSender sender = Bukkit.getConsoleSender();
-        sender.sendMessage(s);
+    public static void say(String... s) {
+        Bukkit.getConsoleSender().sendMessage(s);
     }
 }

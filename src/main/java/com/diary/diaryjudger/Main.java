@@ -1,7 +1,6 @@
 package com.diary.diaryjudger;
 
 import org.bukkit.Bukkit;
-import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
@@ -10,6 +9,17 @@ import java.util.List;
 public final class Main extends JavaPlugin {
     public static Main diaryjudger;
     List<String> requsetlist = new ArrayList<>();
+    public static final String[] logo = new String[]{
+            "",
+            "§3   ___      ___      ___      ___      ___      ___   ",
+            "§3  /\\  \\    /\\__\\    /\\  \\    /\\  \\    /\\  \\    /\\  \\  ",
+            "§3 _\\:\\  \\  /:/ _/_  /::\\  \\  /::\\  \\  /::\\  \\  /::\\  \\ ",
+            "§3/\\/::\\__\\/:/_/\\__\\/:/\\:\\__\\/:/\\:\\__\\/::\\:\\__\\/::\\:\\__\\",
+            "§3\\::/\\/__/\\:\\/:/  /\\:\\/:/  /\\:\\:\\/__/\\:\\:\\/  /\\;:::/  /",
+            "§3 \\/__/    \\::/  /  \\::/  /  \\::/  /  \\:\\/  /  |:\\/__/ ",
+            "§3           \\/__/    \\/__/    \\/__/    \\/__/    \\|__|",
+            ""
+    };
 
     public Main() {
     }
@@ -31,15 +41,7 @@ public final class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         Bukkit.getScheduler().cancelTasks(this);
-        say(" ");
-        say("§3   ___      ___      ___      ___      ___      ___   ");
-        say("§3  /\\  \\    /\\__\\    /\\  \\    /\\  \\    /\\  \\    /\\  \\  ");
-        say("§3 _\\:\\  \\  /:/ _/_  /::\\  \\  /::\\  \\  /::\\  \\  /::\\  \\ ");
-        say("§3/\\/::\\__\\/:/_/\\__\\/:/\\:\\__\\/:/\\:\\__\\/::\\:\\__\\/::\\:\\__\\");
-        say("§3\\::/\\/__/\\:\\/:/  /\\:\\/:/  /\\:\\:\\/__/\\:\\:\\/  /\\;:::/  /");
-        say("§3 \\/__/    \\::/  /  \\::/  /  \\::/  /  \\:\\/  /  |:\\/__/ ");
-        say("§3           \\/__/    \\/__/    \\/__/    \\/__/    \\|__|");
-        say(" ");
+        say(logo);
         say("§3DiaryJudgerV"+this.getDescription().getVersion()+" by Taiyi §a@onDisable");
         say("§7  Code: 插件卸载成功,感谢使用!");
         say(" ");
@@ -54,8 +56,7 @@ public final class Main extends JavaPlugin {
         this.requsetlist.addAll(this.getConfig().getConfigurationSection("Request").getKeys(false));
     }
 
-    public void say(String s) {
-        CommandSender sender = Bukkit.getConsoleSender();
-        sender.sendMessage(s);
+    public static void say(String... s) {
+        Bukkit.getConsoleSender().sendMessage(s);
     }
 }
